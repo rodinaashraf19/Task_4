@@ -164,16 +164,16 @@ export default function AllPerks() {
 
             {/* Merchant Filter Dropdown - Controlled Component */}
             <div>
-              <label className="block text-sm font-medium text-zinc-700 mb-2">
+              <label htmlFor="merchant-filter" className="block text-sm font-medium text-zinc-700 mb-2">
                 <span className="material-symbols-outlined text-sm align-middle">store</span>
                 {' '}Filter by Merchant
               </label>
               <select
+                id="merchant-filter"
                 className="input"
                 onChange={e => setMerchantFilter(e.target.value)}
               >
                 <option value="">All Merchants</option>
-                
                 {uniqueMerchants.map(merchant => (
                   <option key={merchant} value={merchant}>
                     {merchant}
@@ -308,4 +308,3 @@ export default function AllPerks() {
     </div>
   )
 }
-
